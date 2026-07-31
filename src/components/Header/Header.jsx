@@ -4,13 +4,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/Button/Button";
+import { treatments } from "@/data/treatments";
 import styles from "./Header.module.css";
 
-const treatmentLinks = [
-  { href: "/tretmani/laserska-epilacija", label: "Laserska epilacija" },
-  { href: "/tretmani/hydrafacial", label: "Hydrafacial" },
-  { href: "/tretmani/tesla-tretmani", label: "Tesla tretmani" },
-];
+const treatmentLinks = treatments.map(({ href, title }) => ({ href, label: title }));
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
