@@ -1,0 +1,352 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(9, 8, 7, 0.68);
+  border-bottom: 1px solid var(--color-line);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.container {
+  width: min(var(--container-width), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  min-height: var(--header-height);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.logoImg {
+  height: 34px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav a,
+.navTrigger {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-text-soft);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  background: none;
+  border: none;
+  padding: 4px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s ease;
+}
+
+.nav a::after,
+.navTrigger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent-strong);
+  transition: width 0.25s ease;
+}
+
+.nav a:hover,
+.nav a:focus-visible,
+.navItem:hover .navTrigger,
+.navItem:focus-within .navTrigger {
+  color: var(--color-text);
+}
+
+.nav a:hover::after,
+.nav a:focus-visible::after,
+.navItem:hover .navTrigger::after,
+.navItem:focus-within .navTrigger::after {
+  width: 100%;
+}
+
+.caret {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.navItem:hover .caret,
+.navItem:focus-within .caret {
+  transform: rotate(180deg);
+}
+
+.navItem {
+  position: relative;
+  /* Extend the hoverable hitbox straight down to bridge the visual gap to the
+     dropdown below - the padding/margin pair adds zero real layout space,
+     they cancel out visually, so this is purely an invisible hover bridge. */
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.dropdown {
+  position: absolute;
+  /* top: 100% already lands right at the end of the bridge above (padding is
+     part of the containing block for an absolutely positioned child), so the
+     open state below must NOT add any further offset - that would recreate
+     the dead zone this is meant to fix. */
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  min-width: 230px;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.navItem:hover .dropdown,
+.navItem:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown a {
+  display: block;
+  padding: 11px 14px;
+  border-radius: 12px;
+  color: var(--color-text-soft);
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.dropdown a:hover,
+.dropdown a:focus-visible {
+  background: var(--color-surface-strong);
+  color: var(--color-accent-strong);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-self: end;
+}
+
+.contactLink {
+  color: var(--color-text-soft);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.contactLink:hover,
+.contactLink:focus-visible {
+  color: var(--color-text);
+}
+
+.toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  position: relative;
+  justify-self: end;
+}
+
+.toggle span {
+  position: absolute;
+  left: 11px;
+  right: 11px;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.24s ease, opacity 0.18s ease;
+}
+
+.toggle span:nth-child(1) {
+  top: 14px;
+}
+
+.toggle span:nth-child(2) {
+  top: 19px;
+}
+
+.toggle span:nth-child(3) {
+  top: 24px;
+}
+
+.toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.mobileNav {
+  display: none;
+}
+
+.dim,
+.dimVisible {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .nav,
+  .actions {
+    display: none;
+  }
+
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobileNav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    background: rgba(9, 8, 7, 0.97);
+    border-top: 1px solid var(--color-line);
+    box-shadow: var(--shadow);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.24s ease, opacity 0.2s ease, visibility 0s linear 0.24s;
+  }
+
+  .mobileNavOpen {
+    max-height: 80vh;
+    overflow-y: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 0.24s ease, opacity 0.2s ease;
+  }
+
+  .mobileNavInner {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .mobileNavInner a {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    border-radius: 14px;
+    color: var(--color-text);
+    background: var(--color-surface);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.94rem;
+    transition: background-color 0.18s ease;
+  }
+
+  .mobileNavInner a:hover,
+  .mobileNavInner a:focus-visible {
+    background: var(--color-surface-strong);
+  }
+
+  .mobileAccordionTrigger {
+    width: 100%;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 14px;
+    color: var(--color-text);
+    background: var(--color-surface);
+    font-weight: 600;
+    font-size: 0.94rem;
+    transition: background-color 0.18s ease;
+  }
+
+  .mobileAccordionTrigger:hover,
+  .mobileAccordionTrigger:focus-visible {
+    background: var(--color-surface-strong);
+  }
+
+  .caretOpen {
+    transform: rotate(180deg);
+  }
+
+  .mobileSubmenu {
+    display: grid;
+    gap: 8px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding-left: 14px;
+    transition: max-height 0.22s ease, opacity 0.18s ease;
+  }
+
+  .mobileSubmenuOpen {
+    max-height: 260px;
+    opacity: 1;
+    padding-top: 4px;
+  }
+
+  .mobileSubmenu a {
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+  }
+
+  .dimVisible {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  .logoImg {
+    height: 28px;
+  }
+
+  .row {
+    gap: 12px;
+  }
+}
