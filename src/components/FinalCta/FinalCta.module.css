@@ -1,0 +1,129 @@
+.panel {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 72px 40px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, #1d1712 0%, #14100c 55%, #0c0a08 100%);
+  border: 1px solid rgba(228, 191, 139, 0.3);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5), 0 0 60px rgba(228, 191, 139, 0.06);
+}
+
+.glowA,
+.glowB {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(50px);
+  animation: pulse 9s ease-in-out infinite;
+}
+
+.glowA {
+  top: -140px;
+  left: -100px;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(228, 191, 139, 0.4), transparent 70%);
+}
+
+.glowB {
+  bottom: -160px;
+  right: -110px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(184, 134, 79, 0.35), transparent 70%);
+  animation-direction: reverse;
+  animation-duration: 11s;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.eyebrow {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(228, 191, 139, 0.12);
+  border: 1px solid rgba(228, 191, 139, 0.24);
+  color: var(--color-accent-strong);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 12px rgba(228, 191, 139, 0.55);
+}
+
+.panel h2 {
+  position: relative;
+  z-index: 1;
+  color: var(--color-accent-strong);
+}
+
+.panel p {
+  position: relative;
+  z-index: 1;
+  max-width: 56ch;
+  margin: 16px auto 0;
+  color: var(--color-text-soft);
+}
+
+.actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-soft);
+  font-weight: 700;
+  font-size: 0.92rem;
+  transition: color 0.2s ease;
+}
+
+.links a:hover,
+.links a:focus-visible {
+  color: var(--color-text);
+}
+
+@media (max-width: 640px) {
+  .panel {
+    padding: 48px 24px;
+  }
+}

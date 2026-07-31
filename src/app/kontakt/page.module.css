@@ -1,0 +1,96 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.infoCard {
+  padding: 32px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-soft);
+}
+
+.infoCard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.infoList a,
+.infoList span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--color-text-soft);
+}
+
+.infoList a {
+  transition: color 0.2s ease;
+}
+
+.infoList a:hover,
+.infoList a:focus-visible {
+  color: var(--color-accent-strong);
+}
+
+.infoList svg {
+  color: var(--color-accent-strong);
+  flex-shrink: 0;
+}
+
+.hoursTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: var(--color-accent-strong);
+}
+
+.hoursList {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.92rem;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--color-line);
+  color: var(--color-text-soft);
+}
+
+.hoursRow:last-child {
+  border-bottom: none;
+}
+
+.hoursRow strong {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.mapCard {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-soft);
+  line-height: 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
