@@ -46,8 +46,6 @@ export default function Cjenik() {
         <div className={styles.mediaOverlay} />
       </div>
 
-      <div className={styles.glow} aria-hidden="true" />
-
       <div className={`container ${styles.content}`}>
         <SectionHeading
           eyebrow="Cjenik"

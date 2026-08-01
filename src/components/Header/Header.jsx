@@ -89,7 +89,7 @@ export default function Header() {
                 ))}
               </div>
             </div>
-            <Link href="/#cjenik">Cjenovnik</Link>
+            <Link href="/#cjenik">Cjenik</Link>
             <Link href="/galerija">Galerija</Link>
           </nav>
 
@@ -153,7 +153,7 @@ export default function Header() {
             </div>
 
             <Link href="/#cjenik" onClick={closeMenu}>
-              Cjenovnik
+              Cjenik
             </Link>
             <Link href="/galerija" onClick={closeMenu}>
               Galerija
