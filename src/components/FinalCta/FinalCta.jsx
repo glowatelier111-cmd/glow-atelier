@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
 import Button from "@/components/Button/Button";
 import styles from "./FinalCta.module.css";

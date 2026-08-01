@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function Reveal({ children, delay = 0, className = "", as = "div", ...props }) {
   const MotionTag = motion[as] ?? motion.div;

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import styles from "./Faq.module.css";
 

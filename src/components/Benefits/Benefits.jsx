@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { BadgeCheck, MessageCircle, Fingerprint, Sparkles, ShieldCheck, TrendingUp } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import styles from "./Benefits.module.css";

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import Button from "@/components/Button/Button";

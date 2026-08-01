@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import styles from "./PageHero.module.css";
 
 export default function PageHero({ eyebrow, title, description }) {

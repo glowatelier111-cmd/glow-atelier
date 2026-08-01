@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import Button from "@/components/Button/Button";
