@@ -12,14 +12,6 @@ const wordStagger = 0.1;
 const wordDuration = 0.85;
 const afterWords = wordStart + (words.length - 1) * wordStagger + wordDuration;
 
-function StarIcon() {
-  return (
-    <svg viewBox="0 0 20 20" width="12" height="12" fill="currentColor" aria-hidden="true">
-      <path d="M10 1.5l2.59 5.26 5.81.84-4.2 4.1.99 5.79L10 14.9l-5.19 2.59.99-5.79-4.2-4.1 5.81-.84L10 1.5z" />
-    </svg>
-  );
-}
-
 export default function HomeHero() {
   return (
     <section className={styles.hero}>
@@ -90,22 +82,6 @@ export default function HomeHero() {
           <Button href="#tretmani" variant="secondary">
             Pogledaj tretmane
           </Button>
-        </motion.div>
-
-        <motion.div
-          className={styles.rating}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: afterWords + 0.25 }}
-        >
-          <span className={styles.stars} aria-hidden="true">
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
-          </span>
-          4,8/5 <span className={styles.ratingDivider}>·</span> 45+ recenzija
         </motion.div>
       </div>
 

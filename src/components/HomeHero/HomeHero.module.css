@@ -131,25 +131,6 @@
   margin-top: 34px;
 }
 
-.rating {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 26px;
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-}
-
-.stars {
-  display: inline-flex;
-  gap: 2px;
-  color: var(--color-accent-strong);
-}
-
-.ratingDivider {
-  color: var(--color-line-strong);
-}
-
 .scrollCue {
   position: absolute;
   left: 50%;
