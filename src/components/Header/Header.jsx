@@ -12,6 +12,7 @@ const treatmentLinks = treatments.map(({ href, title }) => ({ href, label: title
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [treatmentsOpen, setTreatmentsOpen] = useState(false);
+  const [desktopTretmaniOpen, setDesktopTretmaniOpen] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -32,6 +33,8 @@ export default function Header() {
     setMenuOpen(false);
     setTreatmentsOpen(false);
   };
+
+  const closeDesktopDropdown = () => setDesktopTretmaniOpen(false);
 
   return (
     <>
@@ -56,18 +59,37 @@ export default function Header() {
           <nav className={styles.nav} aria-label="Primarna navigacija">
             <Link href="/">Početna</Link>
             <Link href="/o-nama">O nama</Link>
-            <div className={styles.navItem}>
+            <div
+              className={styles.navItem}
+              onMouseEnter={() => setDesktopTretmaniOpen(true)}
+              onMouseLeave={() => setDesktopTretmaniOpen(false)}
+              onFocus={() => setDesktopTretmaniOpen(true)}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                  setDesktopTretmaniOpen(false);
+                }
+              }}
+            >
               <button type="button" className={styles.navTrigger}>
-                Tretmani <span className={styles.caret} aria-hidden="true">▾</span>
+                Tretmani{" "}
+                <span
+                  className={`${styles.caret} ${desktopTretmaniOpen ? styles.caretOpen : ""}`}
+                  aria-hidden="true"
+                >
+                  ▾
+                </span>
               </button>
-              <div className={styles.dropdown}>
+              <div
+                className={`${styles.dropdown} ${desktopTretmaniOpen ? styles.dropdownOpen : ""}`}
+              >
                 {treatmentLinks.map((link) => (
-                  <Link key={link.href} href={link.href}>
+                  <Link key={link.href} href={link.href} onClick={closeDesktopDropdown}>
                     {link.label}
                   </Link>
                 ))}
               </div>
             </div>
+            <Link href="/#cjenik">Cjenovnik</Link>
             <Link href="/galerija">Galerija</Link>
           </nav>
 
@@ -130,23 +152,21 @@ export default function Header() {
               ))}
             </div>
 
+            <Link href="/#cjenik" onClick={closeMenu}>
+              Cjenovnik
+            </Link>
             <Link href="/galerija" onClick={closeMenu}>
               Galerija
             </Link>
             <Link href="/kontakt" onClick={closeMenu}>
               Kontakt
             </Link>
-            <a
-              href="https://wa.me/385953517205"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={closeMenu}
-            >
-              WhatsApp
-            </a>
-            <Button href="/rezervacija" variant="primary" onClick={closeMenu}>
-              Rezerviraj termin
-            </Button>
+
+            <div className={styles.mobileCta}>
+              <Button href="/rezervacija" variant="primary" onClick={closeMenu}>
+                Rezerviraj termin
+              </Button>
+            </div>
           </div>
         </nav>
       </header>

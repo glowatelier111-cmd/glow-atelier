@@ -90,8 +90,7 @@
   transition: transform 0.2s ease;
 }
 
-.navItem:hover .caret,
-.navItem:focus-within .caret {
+.caretOpen {
   transform: rotate(180deg);
 }
 
@@ -127,8 +126,7 @@
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
-.navItem:hover .dropdown,
-.navItem:focus-within .dropdown {
+.dropdownOpen {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -232,6 +230,15 @@
     display: none;
   }
 
+  .row {
+    /* With .nav and .actions hidden, only brand + toggle remain. Redeclaring
+       the grid to exactly those two columns (instead of the desktop's 3-col
+       auto/1fr/auto) removes a phantom gap that used to sit after the empty
+       middle column, which was pushing the toggle in from the true edge. */
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
   .toggle {
     display: inline-flex;
     align-items: center;
@@ -267,6 +274,34 @@
     display: grid;
     gap: 8px;
     padding: 16px;
+  }
+
+  .mobileCta {
+    margin-top: 10px;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .mobileCta a {
+    width: 100%;
+    min-height: 52px;
+    font-size: 0.95rem;
+  }
+
+  /* .mobileNavInner a below sets a flat background/color on every link, and
+     because it combines two selectors it's more specific than Button's own
+     .primary class - it was silently overriding the button's gold gradient
+     back to the same plain grey as the rest of the menu. Re-assert it here
+     with an equally/more specific selector so the CTA actually stands out. */
+  .mobileNavInner .mobileCta a {
+    background: linear-gradient(135deg, var(--color-accent-strong), var(--color-accent));
+    color: var(--color-text-dark);
+    box-shadow: 0 16px 34px rgba(228, 191, 139, 0.22);
+  }
+
+  .mobileNavInner .mobileCta a:hover,
+  .mobileNavInner .mobileCta a:focus-visible {
+    background: linear-gradient(135deg, #f3d7b1, #e5c091);
   }
 
   .mobileNavInner a {
@@ -307,10 +342,6 @@
   .mobileAccordionTrigger:hover,
   .mobileAccordionTrigger:focus-visible {
     background: var(--color-surface-strong);
-  }
-
-  .caretOpen {
-    transform: rotate(180deg);
   }
 
   .mobileSubmenu {
