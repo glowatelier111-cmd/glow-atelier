@@ -1,12 +1,14 @@
 import PageHero from "@/components/PageHero/PageHero";
 import PrivacySettingsTrigger from "@/components/PrivacySettingsTrigger/PrivacySettingsTrigger";
+import { buildMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Politika kolačića",
   description:
     "Pregled kolačića koje glowatelier.eu koristi - naziv, svrha i trajanje, te način na koji možete upravljati svojim postavkama privatnosti.",
-};
+  path: "/politika-kolacica",
+});
 
 const cookieRows = [
   {

@@ -3,9 +3,13 @@ import Script from "next/script";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import PrivacyBanner from "@/components/PrivacyBanner/PrivacyBanner";
+import { SITE_NAME, SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const GTM_ID = "GTM-P9P2WPFG";
+const DEFAULT_TITLE = "Glow Atelier Rijeka | Laserska epilacija, Hydrafacial i Tesla tretmani";
+const DEFAULT_DESCRIPTION =
+  "Glow Atelier je kozmetički salon u Rijeci za lasersku epilaciju, Hydrafacial i Tesla tretmane. Besplatne konzultacije, individualan pristup i licencirano osoblje.";
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-heading",
@@ -22,12 +26,32 @@ const manrope = Manrope({
 });
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Glow Atelier Rijeka | Laserska epilacija, Hydrafacial i Tesla tretmani",
+    default: DEFAULT_TITLE,
     template: "%s | Glow Atelier Rijeka",
   },
-  description:
-    "Glow Atelier je kozmetički salon u Rijeci za lasersku epilaciju, Hydrafacial i Tesla tretmane. Besplatne konzultacije, individualan pristup i licencirano osoblje.",
+  description: DEFAULT_DESCRIPTION,
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "hr_HR",
+    type: "website",
+    images: [
+      { url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: SITE_NAME },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [`${SITE_URL}/opengraph-image`],
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+  },
 };
 
 export default function RootLayout({ children }) {

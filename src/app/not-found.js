@@ -1,10 +1,15 @@
 import { Compass } from "lucide-react";
 import Button from "@/components/Button/Button";
 import Reveal from "@/components/Reveal/Reveal";
+import { buildMetadata } from "@/lib/seo";
 import styles from "./not-found.module.css";
 
 export const metadata = {
-  title: "Stranica nije pronađena",
+  ...buildMetadata({
+    title: "Stranica nije pronađena",
+    description: "Stranica koju tražite ne postoji ili je premještena.",
+    path: "/404",
+  }),
   robots: { index: false, follow: true },
 };
 

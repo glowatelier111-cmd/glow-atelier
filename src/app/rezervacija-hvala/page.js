@@ -1,8 +1,12 @@
 import ThankYou from "@/components/ThankYou/ThankYou";
+import { buildMetadata } from "@/lib/seo";
 
 export const metadata = {
-  title: "Hvala Vam",
-  description: "Vaš upit za rezervaciju je uspješno zaprimljen.",
+  ...buildMetadata({
+    title: "Hvala Vam",
+    description: "Vaš upit za rezervaciju je uspješno zaprimljen.",
+    path: "/rezervacija-hvala",
+  }),
   robots: { index: false, follow: false },
 };
 

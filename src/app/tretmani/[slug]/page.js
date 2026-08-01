@@ -6,6 +6,9 @@ import TreatmentProcess from "@/components/TreatmentProcess/TreatmentProcess";
 import TreatmentSuitability from "@/components/TreatmentSuitability/TreatmentSuitability";
 import Faq from "@/components/Faq/Faq";
 import FinalCta from "@/components/FinalCta/FinalCta";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { buildMetadata } from "@/lib/seo";
+import { getServiceSchema, getFaqSchema } from "@/lib/structuredData";
 
 export function generateStaticParams() {
   return treatments.map((treatment) => ({ slug: treatment.slug }));
@@ -19,10 +22,11 @@ export async function generateMetadata({ params }) {
     return {};
   }
 
-  return {
+  return buildMetadata({
     title: treatment.title,
     description: treatment.metaDescription,
-  };
+    path: `/tretmani/${treatment.slug}`,
+  });
 }
 
 export default async function TreatmentPage({ params }) {
@@ -35,6 +39,8 @@ export default async function TreatmentPage({ params }) {
 
   return (
     <main>
+      <JsonLd data={getServiceSchema(treatment)} />
+      <JsonLd data={getFaqSchema(treatment.faqs)} />
       <TreatmentHero treatment={treatment} />
       <TreatmentPricing treatment={treatment} />
       <TreatmentProcess treatment={treatment} />

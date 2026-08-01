@@ -3,13 +3,15 @@ import PageHero from "@/components/PageHero/PageHero";
 import FinalCta from "@/components/FinalCta/FinalCta";
 import Reveal from "@/components/Reveal/Reveal";
 import { galleryCategories } from "@/data/gallery";
+import { buildMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Galerija",
   description:
     "Pogledajte prostor, opremu i tretmane u Glow Atelieru - kozmetičkom salonu u Rijeci za lasersku epilaciju, Hydrafacial i Tesla tretmane.",
-};
+  path: "/galerija",
+});
 
 export default function GalerijaPage() {
   return (

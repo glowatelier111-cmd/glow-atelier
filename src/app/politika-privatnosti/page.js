@@ -1,11 +1,13 @@
 import PageHero from "@/components/PageHero/PageHero";
+import { buildMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Politika privatnosti",
   description:
     "Politika privatnosti Glow Atelier d.o.o. - kako prikupljamo, koristimo i štitimo vaše osobne podatke u skladu s GDPR-om.",
-};
+  path: "/politika-privatnosti",
+});
 
 export default function PolitikaPrivatnostiPage() {
   return (

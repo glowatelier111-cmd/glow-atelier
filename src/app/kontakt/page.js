@@ -2,13 +2,15 @@ import { MapPin, Phone, Clock } from "lucide-react";
 import PageHero from "@/components/PageHero/PageHero";
 import ContactForm from "@/components/ContactForm/ContactForm";
 import Reveal from "@/components/Reveal/Reveal";
+import { buildMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Kontakt",
   description:
     "Kontaktirajte Glow Atelier u Rijeci - adresa, telefon i obrazac za upite o laserskoj epilaciji, Hydrafacialu i Tesla tretmanima.",
-};
+  path: "/kontakt",
+});
 
 const hours = [
   { day: "Ponedjeljak - Petak", time: "09:00 - 20:00" },

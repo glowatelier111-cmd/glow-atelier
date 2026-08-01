@@ -4,13 +4,15 @@ import PageHero from "@/components/PageHero/PageHero";
 import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import FinalCta from "@/components/FinalCta/FinalCta";
 import Reveal from "@/components/Reveal/Reveal";
+import { buildMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "O nama",
   description:
     "Glow Atelier by Orešković Clinic - ekskluzivni kozmetički salon u Rijeci, dio Orešković Clinic mreže prisutne u Zagrebu i Opatiji.",
-};
+  path: "/o-nama",
+});
 
 const trustPoints = [
   {
