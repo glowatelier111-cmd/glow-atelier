@@ -93,10 +93,32 @@
   color: var(--color-text-muted);
 }
 
+.credit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.creditDivider {
+  color: var(--color-line-strong);
+}
+
+.credit a {
+  color: var(--color-text-muted);
+  transition: color 0.2s ease;
+}
+
+.credit a:hover,
+.credit a:focus-visible {
+  color: var(--color-text);
+}
+
 .legal {
   display: flex;
   align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 16px 20px;
 }
 
 .legal a,

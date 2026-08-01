@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MessageCircle } from "lucide-react";
 import InstagramIcon from "@/components/InstagramIcon/InstagramIcon";
+import PrivacySettingsTrigger from "@/components/PrivacySettingsTrigger/PrivacySettingsTrigger";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -62,12 +63,24 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>Sva prava pridržana © {year} Glow Atelier</p>
+          <div className={styles.credit}>
+            <span>Sva prava pridržana © {year} Glow Atelier</span>
+            <span className={styles.creditDivider} aria-hidden="true">
+              ·
+            </span>
+            <span>
+              Izrada sajta:{" "}
+              <a href="https://www.tyne.rs/" target="_blank" rel="noopener noreferrer">
+                Tyne Agency
+              </a>
+            </span>
+          </div>
           <div className={styles.legal}>
             <Link href="/politika-privatnosti">Politika privatnosti</Link>
-            <button type="button" className={styles.cookieBtn} data-cookie-settings>
+            <Link href="/politika-kolacica">Politika kolačića</Link>
+            <PrivacySettingsTrigger className={styles.cookieBtn}>
               Postavke kolačića
-            </button>
+            </PrivacySettingsTrigger>
           </div>
         </div>
       </div>
