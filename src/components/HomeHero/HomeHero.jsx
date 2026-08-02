@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Button from "@/components/Button/Button";
 import styles from "./HomeHero.module.css";
 
-const headline = "Ljepota kojoj Rijeka vjeruje";
+const headline = "Ljepota kojoj Rijeka vjerujee";
 const words = headline.split(" ");
 const wordStart = 0.45;
 const wordStagger = 0.1;
