@@ -58,6 +58,11 @@
   color: var(--color-text-muted);
 }
 
+.error {
+  font-size: 0.82rem;
+  color: var(--color-danger);
+}
+
 @media (max-width: 640px) {
   .form {
     padding: 26px 22px;
