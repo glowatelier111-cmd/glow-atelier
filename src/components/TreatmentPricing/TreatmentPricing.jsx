@@ -10,7 +10,7 @@ export default function TreatmentPricing({ treatment }) {
         <SectionHeading
           eyebrow="Cjenik"
           title="Cijene i paketi"
-          description="Jasan pregled cijena prije rezervacije - za dodatna pitanja o zonama ili paketima javite se na konzultaciju."
+          description="Odaberite paket koji odgovara vašem cilju - za pomoć oko odabira zone ili broja tretmana slobodno nas kontaktirajte."
         />
 
         <Reveal className={styles.card}>

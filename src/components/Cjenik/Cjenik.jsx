@@ -50,7 +50,7 @@ export default function Cjenik() {
         <SectionHeading
           eyebrow="Cjenik"
           title="Brzi pregled ponude i cijena"
-          description="Cijene su grupirane po tretmanu tako da odmah vidite glavne pakete i sljedeći korak prema rezervaciji."
+          description="Jasne cijene po tretmanu, bez skrivenih troškova - pogledajte ponudu i rezervirajte termin koji vam odgovara."
         />
 
         <motion.div
