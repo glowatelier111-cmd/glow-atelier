@@ -8,10 +8,6 @@
 .mediaImg {
   object-fit: cover;
   filter: blur(6px) saturate(1.05) brightness(0.75);
-  /* blur() sampling past a hard-cropped edge has no real pixels to blend
-     into, which shows up as a faint bright seam at the very top/bottom of
-     the section. A small scale pushes that artifact outside the visible
-     crop without noticeably changing the framing or darkness. */
   transform: scale(1.03);
 }
 

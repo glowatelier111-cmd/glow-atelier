@@ -1,9 +1,6 @@
 import { treatments } from "@/data/treatments";
 import { SITE_URL } from "@/lib/seo";
 
-// kontakt-hvala/rezervacija-hvala are intentionally excluded - they're
-// noindex conversion pages only meant to be reached by submitting a form,
-// not discovered via search.
 export default function sitemap() {
   const lastModified = new Date();
 
