@@ -22,7 +22,7 @@ export default function Footer() {
             />
             <p>Franje Matkovića 23, 50000 Rijeka</p>
             <p className={styles.tagline}>
-              Kozmetički salon za lasersku epilaciju, Hydrafacial i Tesla tretmane.
+              Kozmetički salon za lasersku epilaciju, Hydrafacial i tretmane oblikovanja tijela.
             </p>
             <a
               className={styles.social}

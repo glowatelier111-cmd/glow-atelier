@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 export const metadata = buildMetadata({
   title: "Rezervacija",
   description:
-    "Rezervirajte lasersku epilaciju, Hydrafacial ili Tesla tretman u Glow Atelieru Rijeka. Ispunite obrazac i naš tim će vas kontaktirati radi potvrde termina.",
+    "Rezervirajte lasersku epilaciju, Hydrafacial ili tretman oblikovanja tijela u Glow Atelieru Rijeka. Ispunite obrazac i naš tim će vas kontaktirati radi potvrde termina.",
   path: "/rezervacija",
 });
 

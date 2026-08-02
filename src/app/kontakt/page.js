@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 export const metadata = buildMetadata({
   title: "Kontakt",
   description:
-    "Kontaktirajte Glow Atelier u Rijeci - adresa, telefon i obrazac za upite o laserskoj epilaciji, Hydrafacialu i Tesla tretmanima.",
+    "Kontaktirajte Glow Atelier u Rijeci - adresa, telefon i obrazac za upite o laserskoj epilaciji, Hydrafacialu i tretmanima oblikovanja tijela.",
   path: "/kontakt",
 });
 

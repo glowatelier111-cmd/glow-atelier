@@ -24,7 +24,7 @@ const benefits = [
   {
     icon: Sparkles,
     title: "Moderna oprema",
-    text: "Laser, Hydrafacial i Tesla tretmani objedinjeni su na jednoj lokaciji u Rijeci.",
+    text: "Laser, Hydrafacial i tretmani oblikovanja tijela objedinjeni su na jednoj lokaciji u Rijeci.",
   },
   {
     icon: ShieldCheck,

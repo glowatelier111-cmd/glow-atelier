@@ -185,28 +185,29 @@ export const treatments = [
     ],
   },
   {
-    slug: "tesla-tretmani",
-    title: "Tesla tretmani",
+    slug: "oblikovanje-tijela",
+    title: "Oblikovanje tijela",
     kicker: "Body sculpt",
     shortDescription:
       "Za klijente koji žele neinvazivnu podršku oblikovanju tijela i čvršćem osjećaju kroz strukturiran plan dolazaka.",
     heroBenefit:
-      "Neinvazivna podrška oblikovanju tijela uz jaču kontrakciju mišića, bez igli i vremena oporavka.",
+      "Neinvazivno oblikovanje tijela uz jaču kontrakciju mišića i čvršću liniju tijela, bez igli i vremena oporavka.",
     metaDescription:
-      "Tesla tretmani u Rijeci - neinvazivno oblikovanje tijela i jačanje mišića bez igli i oporavka. Rezervirajte u Glow Atelieru.",
+      "Oblikovanje tijela u Rijeci - neinvazivna HIEMT tehnologija za čvršću i oblikovaniju liniju tijela, bez igli i oporavka. Rezervirajte u Glow Atelieru.",
     points: [
       "Neinvazivan pristup za ciljane regije tijela",
       "Pojedinačni tretman ili paket prema vašem planu",
       "Jasan pregled opcija prije same rezervacije",
     ],
     image: "/images/treatments/treatment3.webp",
-    secondImage: "/images/treatments/treatment3-detail.webp",
-    href: "/tretmani/tesla-tretmani",
+    secondImage: "/images/treatments/treatment4.webp",
+    href: "/tretmani/oblikovanje-tijela",
     pricing: {
       startingPrice: 40,
       note: null,
       packages: [
-        { label: "1 tretman", price: 40 },
+        { label: "Pojedinačni tretman", price: 40 },
+        { label: "Paket 5 + 1 gratis", price: 200 },
         { label: "Paket 10 + 2 gratis", price: 400 },
       ],
     },
@@ -232,7 +233,7 @@ export const treatments = [
     ],
     suitability: {
       intro:
-        "Tesla tretmani namijenjeni su klijentima koji uz redovitu tjelesnu aktivnost žele dodatnu podršku u oblikovanju i jačanju ciljanih regija tijela.",
+        "Oblikovanje tijela namijenjeno je klijentima koji uz redovitu tjelesnu aktivnost žele dodatnu podršku u oblikovanju i jačanju ciljanih regija tijela.",
       points: [
         "Onima koji žele čvršći osjećaj u području trbuha, stražnjice ili bedara",
         "Klijentima bez vremena za dodatne intenzivne treninge",
@@ -256,7 +257,7 @@ export const treatments = [
     ],
     faqs: [
       {
-        question: "Je li Tesla tretman bolan?",
+        question: "Je li tretman oblikovanja tijela bolan?",
         answer:
           "Ne, osjećaj se opisuje kao intenzivna kontrakcija mišića, slična vježbanju, a intenzitet se prilagođava vašoj udobnosti.",
       },
@@ -268,6 +269,180 @@ export const treatments = [
         question: "Mogu li kombinirati više regija tijela?",
         answer:
           "Da, plan tretmana možemo prilagoditi za više regija, a redoslijed i dinamiku dogovaramo prema vašem cilju.",
+      },
+    ],
+  },
+  {
+    slug: "jacanje-misica",
+    title: "Jačanje mišića",
+    kicker: "Jača muskulatura",
+    shortDescription:
+      "Jači, definiraniji mišići bez sati provedenih u teretani - elektromagnetna stimulacija djeluje na trbuh, stražnjicu, ruke i noge.",
+    heroBenefit:
+      "Elektromagnetna stimulacija izaziva mišićne kontrakcije koje se ne mogu postići voljnim vježbanjem, uz vidljivo jaču i definiraniju muskulaturu.",
+    metaDescription:
+      "Jačanje mišića u Rijeci - elektromagnetna HIEMT stimulacija za jaču i definiraniju muskulaturu trbuha, stražnjice, ruku i nogu. Rezervirajte u Glow Atelieru.",
+    points: [
+      "Kontrakcije mišića koje se ne postižu voljnim vježbanjem",
+      "Djeluje na trbuh, stražnjicu, ruke i noge",
+      "Jedan tretman traje oko 30 minuta",
+    ],
+    image: "/images/treatments/treatment5.webp",
+    secondImage: "/images/treatments/treatment6.webp",
+    href: "/tretmani/jacanje-misica",
+    pricing: {
+      startingPrice: 40,
+      note: null,
+      packages: [
+        { label: "Pojedinačni tretman", price: 40 },
+        { label: "Paket 5 + 1 gratis", price: 200 },
+        { label: "Paket 10 + 2 gratis", price: 400 },
+      ],
+    },
+    steps: [
+      {
+        title: "Konzultacija i odabir regije",
+        description:
+          "Zajedno biramo regiju za jačanje - trbuh, stražnjicu, ruke ili noge - prema vašem cilju.",
+      },
+      {
+        title: "Postavljanje aplikatora",
+        description: "Aplikator se postavlja na ciljano područje, a intenzitet se prilagođava vašoj osjetljivosti.",
+      },
+      {
+        title: "Sam tretman",
+        description:
+          "Elektromagnetski impulsi izazivaju na tisuće mišićnih kontrakcija u približno 30 minuta, intenzivnije nego kod voljnog vježbanja.",
+      },
+      {
+        title: "Nakon tretmana",
+        description: "Nema vremena oporavka - možete se odmah vratiti svakodnevnim obavezama.",
+      },
+    ],
+    suitability: {
+      intro:
+        "Tretman je namijenjen osobama koje žele dodatno definirati i ojačati mišiće, kao nadopunu redovitoj fizičkoj aktivnosti ili kao alternativu za one s manjkom vremena za trening.",
+      points: [
+        "Klijentima koji žele nadopuniti redoviti trening",
+        "Onima s manjkom vremena za intenzivne vježbe u teretani",
+        "Podršku kod ubrzavanja vidljivih rezultata definicije mišića",
+      ],
+    },
+    timeline: [
+      {
+        title: "Nakon 2-3 tretmana",
+        description: "Mnogi klijenti primjećuju osjećaj jače kontrahirane muskulature na tretiranom području.",
+      },
+      {
+        title: "Nakon 6-8 tretmana",
+        description: "Mišići djeluju definiranije, a tonus izraženiji uz redovitu aktivnost.",
+      },
+      {
+        title: "Uz paket od 10 tretmana",
+        description: "Rezultati su najizraženiji uz uravnoteženu prehranu i redovito kretanje.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Je li tretman jačanja mišića bolan?",
+        answer:
+          "Ne, osjećaj se opisuje kao intenzivna kontrakcija mišića, slična vježbanju, a intenzitet se prilagođava vašoj udobnosti.",
+      },
+      {
+        question: "Koje regije tijela mogu tretirati?",
+        answer: "Trbuh, stražnjicu, ruke i noge - regiju biramo zajedno prema vašem cilju.",
+      },
+      {
+        question: "Mogu li kombinirati više regija?",
+        answer:
+          "Da, plan tretmana možemo prilagoditi za više regija, a redoslijed i dinamiku dogovaramo prema vašem cilju.",
+      },
+    ],
+  },
+  {
+    slug: "podizanje-straznjice",
+    title: "Podizanje stražnjice",
+    kicker: "Zategnuta koža",
+    shortDescription:
+      "Podignuta, oblikovana i učvršćena stražnjica bez operativnog zahvata, kroz kombinaciju mišićne stimulacije i zatezanja kože.",
+    heroBenefit:
+      "Kombinacija elektromagnetne stimulacije mišića i zatezanja kože oblikuje, podiže i učvršćuje stražnjicu, bez kirurškog zahvata i bez perioda oporavka.",
+    metaDescription:
+      "Podizanje stražnjice u Rijeci - neinvazivno oblikovanje i učvršćivanje HIEMT tehnologijom, bez operacije i oporavka. Rezervirajte u Glow Atelieru.",
+    points: [
+      "Podiže, oblikuje i učvršćuje bez operativnog zahvata",
+      "Potiče kontrakciju mišića i proizvodnju kolagena",
+      "Bez perioda oporavka - odmah nazad svakodnevnim aktivnostima",
+    ],
+    image: "/images/treatments/treatment7.webp",
+    secondImage: "/images/treatments/treatment3-detail.webp",
+    href: "/tretmani/podizanje-straznjice",
+    pricing: {
+      startingPrice: 40,
+      note: null,
+      packages: [
+        { label: "Pojedinačni tretman", price: 40 },
+        { label: "Paket 5 + 1 gratis", price: 200 },
+        { label: "Paket 10 + 2 gratis", price: 400 },
+      ],
+    },
+    steps: [
+      {
+        title: "Konzultacija",
+        description:
+          "Procjenjujemo vaš cilj te trenutno stanje kože i mišića i dogovaramo plan broja tretmana.",
+      },
+      {
+        title: "Postavljanje aplikatora",
+        description: "Aplikator se postavlja na stražnjicu, a intenzitet se prilagođava vašoj osjetljivosti.",
+      },
+      {
+        title: "Sam tretman",
+        description:
+          "Elektromagnetski impulsi izazivaju intenzivne kontrakcije mišića, uz istovremeno poticanje proizvodnje kolagena za zategnutiju kožu.",
+      },
+      {
+        title: "Nakon tretmana",
+        description: "Nema perioda oporavka - odmah se vraćate svakodnevnim aktivnostima.",
+      },
+    ],
+    suitability: {
+      intro:
+        "Tretman je namijenjen svima koji žele podignutiju, oblikovaniju i učvršćeniju stražnjicu, bez operativnog zahvata. Pogodan je i kao dopuna redovnom treningu, i kao samostalno rješenje za one koji žele vidljive rezultate bez odlaska u teretanu.",
+      points: [
+        "Klijentima koji žele podignutiju i oblikovaniju stražnjicu",
+        "Dopunu redovnom treningu u teretani",
+        "Samostalno rješenje za vidljive rezultate bez teretane",
+      ],
+    },
+    timeline: [
+      {
+        title: "Nakon 2-3 tretmana",
+        description: "Mnogi klijenti primjećuju osjećaj čvršće muskulature na tretiranom području.",
+      },
+      {
+        title: "Nakon 6-8 tretmana",
+        description: "Stražnjica djeluje podignutije i oblikovanije, uz zategnutiju kožu.",
+      },
+      {
+        title: "Uz paket od 10 tretmana",
+        description: "Rezultati su najizraženiji uz redovitu tjelesnu aktivnost i uravnoteženu prehranu.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Je li tretman podizanja stražnjice bolan?",
+        answer:
+          "Ne, osjećaj se opisuje kao intenzivna kontrakcija mišića, slična vježbanju, a intenzitet se prilagođava vašoj udobnosti.",
+      },
+      {
+        question: "Koliko traje jedan tretman?",
+        answer: "Jedan tretman traje otprilike 30 minuta, bez potrebe za pripremom ili oporavkom.",
+      },
+      {
+        question: "Kada su vidljivi prvi rezultati?",
+        answer:
+          "Prvi osjećaj čvršće muskulature primjećuje se već nakon 2-3 tretmana, a vidljivije oblikovanje uz seriju od 6 do 10 dolazaka.",
       },
     ],
   },

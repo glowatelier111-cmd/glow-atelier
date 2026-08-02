@@ -24,8 +24,8 @@ export const defaultFaqs = [
       "Hydrafacial kombinira čišćenje, piling i duboku hidrataciju kože u jednom tretmanu bez razdoblja oporavka, pa je pogodan za gotovo svaki tip kože. Idealan je kad želite brz, uredan 'refresh' lica prije nekog događaja ili kao redovitu njegu.",
   },
   {
-    question: "Kome su namijenjeni Tesla tretmani i je li postupak neugodan?",
+    question: "Kome su namijenjeni tretmani oblikovanja tijela i je li postupak neugodan?",
     answer:
-      "Tesla tretmani koriste elektromagnetske impulse koji potiču jaču kontrakciju mišića, a namijenjeni su klijentima koji žele neinvazivnu podršku oblikovanju tijela uz redovitu aktivnost. Tretman se najčešće opisuje kao intenzivna vježba, a ne kao bolan zahvat.",
+      "Oblikovanje tijela, jačanje mišića i podizanje stražnjice koriste elektromagnetske impulse koji potiču jaču kontrakciju mišića, a namijenjeni su klijentima koji žele neinvazivnu podršku oblikovanju tijela uz redovitu aktivnost. Tretman se najčešće opisuje kao intenzivna vježba, a ne kao bolan zahvat.",
   },
 ];

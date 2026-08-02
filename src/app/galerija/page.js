@@ -9,7 +9,7 @@ import styles from "./page.module.css";
 export const metadata = buildMetadata({
   title: "Galerija",
   description:
-    "Pogledajte prostor, opremu i tretmane u Glow Atelieru - kozmetičkom salonu u Rijeci za lasersku epilaciju, Hydrafacial i Tesla tretmane.",
+    "Pogledajte prostor, opremu i tretmane u Glow Atelieru - kozmetičkom salonu u Rijeci za lasersku epilaciju, Hydrafacial i tretmane oblikovanja tijela.",
   path: "/galerija",
 });
 

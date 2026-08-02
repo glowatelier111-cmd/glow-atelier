@@ -36,7 +36,7 @@ export default async function Image() {
             color: "#dccfbe",
           }}
         >
-          Laserska epilacija · Hydrafacial · Tesla tretmani
+          Laserska epilacija · Hydrafacial · Oblikovanje tijela
         </div>
         <div
           style={{

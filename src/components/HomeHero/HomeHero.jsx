@@ -66,7 +66,7 @@ export default function HomeHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: afterWords - 0.15, ease: [0.16, 1, 0.3, 1] }}
         >
-          Laserska epilacija, Hydrafacial i Tesla tretmani — uz besplatnu konzultaciju i
+          Laserska epilacija, Hydrafacial i tretmani oblikovanja tijela — uz besplatnu konzultaciju i
           individualan pristup svakom klijentu.
         </motion.p>
 
