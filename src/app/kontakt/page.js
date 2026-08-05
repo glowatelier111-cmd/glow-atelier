@@ -13,9 +13,9 @@ export const metadata = buildMetadata({
 });
 
 const hours = [
-  { day: "Ponedjeljak - Petak", time: "09:00 - 20:00" },
-  { day: "Subota", time: "09:00 - 15:00" },
-  { day: "Nedjelja", time: "Zatvoreno" },
+  { day: "Ponedjeljak, sreda, petak", time: "14:00 - 20:00" },
+  { day: "Utorak, četvrtak", time: "08:00 - 14:00" },
+  { day: "Subota i nedjelja", time: "Zatvoreno" },
 ];
 
 export default function KontaktPage() {
