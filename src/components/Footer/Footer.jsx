@@ -55,10 +55,10 @@ export default function Footer() {
               <Mail size={15} strokeWidth={2} aria-hidden="true" />
               glowatelier.rijeka@gmail.com
             </a>
-            <a href="https://wa.me/385953517205" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://wa.me/385953517205" target="_blank" rel="noopener noreferrer">
               <MessageCircle size={15} strokeWidth={2} aria-hidden="true" />
               WhatsApp
-            </a>
+            </a> */}
           </div>
         </div>
 

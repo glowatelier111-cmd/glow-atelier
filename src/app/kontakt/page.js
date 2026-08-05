@@ -13,7 +13,7 @@ export const metadata = buildMetadata({
 });
 
 const hours = [
-  { day: "Ponedjeljak, sreda, petak", time: "14:00 - 20:00" },
+  { day: "Ponedjeljak, srijeda, petak", time: "14:00 - 20:00" },
   { day: "Utorak, četvrtak", time: "08:00 - 14:00" },
   { day: "Subota i nedjelja", time: "Zatvoreno" },
 ];
