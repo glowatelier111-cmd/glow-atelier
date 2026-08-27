@@ -31,7 +31,7 @@ export const treatments = [
         { label: "Bikini + prepone", price: 450 },
         { label: "Pazusi", price: 400 },
         { label: "Pazusi + bikini", price: 600 },
-        { label: "Cijelo tijelo", price: 1000 },
+        { label: "Cijelo tijelo", price: 1500 },
       ],
     },
     steps: [
