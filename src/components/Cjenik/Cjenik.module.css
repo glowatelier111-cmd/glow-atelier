@@ -91,10 +91,10 @@
 }
 
 .priceList li {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 3.4rem 3.6rem;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  column-gap: 6px;
   padding: 10px 0;
   border-bottom: 1px solid rgba(255, 236, 214, 0.1);
   font-size: 0.92rem;
@@ -110,6 +110,30 @@
   font-size: 1.15rem;
   color: var(--color-accent-strong);
   white-space: nowrap;
+  text-align: right;
+}
+
+.priceList li > span:first-child {
+  padding-right: 6px;
+}
+
+.anchorPrice {
+  font-size: 0.85rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.priceList li.priceHead {
+  padding: 0 0 2px;
+  border-bottom: none;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  text-align: right;
+  color: var(--color-text-muted);
+}
+
+.priceHead span:last-child {
+  color: var(--color-accent-strong);
 }
 
 .cardCta {

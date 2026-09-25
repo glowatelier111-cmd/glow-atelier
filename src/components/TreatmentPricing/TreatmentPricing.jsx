@@ -17,10 +17,18 @@ export default function TreatmentPricing({ treatment }) {
           {treatment.pricing.note && <p className={styles.note}>{treatment.pricing.note}</p>}
 
           <ul className={styles.priceList}>
+            <li className={styles.priceHead} aria-hidden="true">
+              <span />
+              <span>Sidrena cijena</span>
+              <span>Cijena</span>
+            </li>
             {treatment.pricing.packages.map((pkg) => (
               <li key={pkg.label}>
                 <span>{pkg.label}</span>
-                <strong>{pkg.price}€</strong>
+                <span className={styles.anchorPrice} aria-label={`Sidrena cijena ${pkg.price}€`}>
+                  {pkg.price}€
+                </span>
+                <strong aria-label={`Cijena ${pkg.price}€`}>{pkg.price}€</strong>
               </li>
             ))}
           </ul>
