@@ -19,7 +19,7 @@ export default function TreatmentPricing({ treatment }) {
           <ul className={styles.priceList}>
             <li className={styles.priceHead} aria-hidden="true">
               <span />
-              <span>Sidrena cijena</span>
+              <span>Sidrena cijena (od 10.09.2026.)</span>
               <span>Cijena</span>
             </li>
             {treatment.pricing.packages.map((pkg) => (
