@@ -1,4 +1,4 @@
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
@@ -11,18 +11,24 @@ const DEFAULT_TITLE = "Glow Atelier Rijeka | Laserska epilacija, Hydrafacial i t
 const DEFAULT_DESCRIPTION =
   "Glow Atelier je kozmetički salon u Rijeci za lasersku epilaciju, Hydrafacial, Head Spa i tretmane oblikovanja tijela. Besplatne konzultacije, individualan pristup i licencirano osoblje.";
 
-const cormorantGaramond = Cormorant_Garamond({
+// Self-hosted (SIL OFL, see ./fonts/OFL-*.txt) instead of next/font/google so
+// builds never depend on fetching from Google Fonts. Variable fonts trimmed to
+// the weights used and to Latin + Latin Extended-A (covers č ć š ž đ).
+const cormorantGaramond = localFont({
+  src: "./fonts/CormorantGaramond-Variable.woff2",
   variable: "--font-heading",
-  weight: ["600", "700"],
-  subsets: ["latin", "latin-ext"],
+  weight: "600 700",
   display: "swap",
+  fallback: ["Georgia", "serif"],
+  adjustFontFallback: "Times New Roman",
 });
 
-const manrope = Manrope({
+const manrope = localFont({
+  src: "./fonts/Manrope-Variable.woff2",
   variable: "--font-body",
-  weight: ["400", "500", "600", "700", "800"],
-  subsets: ["latin", "latin-ext"],
+  weight: "400 800",
   display: "swap",
+  fallback: ["system-ui", "sans-serif"],
 });
 
 export const metadata = {
