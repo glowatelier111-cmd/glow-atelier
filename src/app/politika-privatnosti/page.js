@@ -40,7 +40,7 @@ export default function PolitikaPrivatnostiPage() {
               E-mail: glowatelier.rijeka@gmail.com
             </p>
             <p>
-              Salon posluje na adresi Franje Matkovića 23, 50000 Rijeka, gdje se odvijaju
+              Salon posluje na adresi Dubrovačka ulica 1, 51000 Rijeka, gdje se odvijaju
               tretmani i konzultacije.
             </p>
 

@@ -20,7 +20,7 @@ export default function Footer() {
               height={40}
               className={styles.logo}
             />
-            <p>Franje Matkovića 23, 50000 Rijeka</p>
+            <p>Dubrovačka ulica 1, 51000 Rijeka</p>
             <p className={styles.tagline}>
               Kozmetički salon za lasersku epilaciju, Hydrafacial, Head Spa i tretmane oblikovanja tijela.
             </p>

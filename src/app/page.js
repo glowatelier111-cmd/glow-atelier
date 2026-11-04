@@ -15,10 +15,10 @@ export default function Home() {
       <JsonLd data={getLocalBusinessSchema()} />
       <JsonLd data={getFaqSchema(defaultFaqs)} />
       <HomeHero />
-      <Benefits />
       <Treatments />
       <HomeHeadSpa />
       <Cjenik />
+      <Benefits />
       <Faq />
       <FinalCta />
     </main>

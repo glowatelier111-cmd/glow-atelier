@@ -35,7 +35,7 @@ export default function KontaktPage() {
               <div className={styles.infoList}>
                 <span>
                   <MapPin size={17} strokeWidth={2} aria-hidden="true" />
-                  Franje Matkovića 23, 50000 Rijeka
+                  Dubrovačka ulica 1, 51000 Rijeka
                 </span>
                 <a href="tel:+385953517205">
                   <Phone size={17} strokeWidth={2} aria-hidden="true" />
@@ -63,7 +63,7 @@ export default function KontaktPage() {
 
             <Reveal className={styles.mapCard} delay={0.2}>
               <iframe
-                src="https://www.google.com/maps?q=Franje+Matkovi%C4%87a+23,+50000+Rijeka,+Hrvatska&output=embed"
+                src="https://www.google.com/maps?q=Dubrova%C4%8Dka+ulica+1,+51000+Rijeka,+Hrvatska&output=embed"
                 width="100%"
                 height="320"
                 style={{ border: 0 }}

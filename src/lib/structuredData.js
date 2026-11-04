@@ -16,8 +16,8 @@ export function getLocalBusinessSchema() {
     priceRange: "€€",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Franje Matkovića 23",
-      postalCode: "50000",
+      streetAddress: "Dubrovačka ulica 1",
+      postalCode: "51000",
       addressLocality: "Rijeka",
       addressCountry: "HR",
     },

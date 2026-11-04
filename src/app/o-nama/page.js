@@ -116,7 +116,7 @@ export default function ONamaPage() {
         <div className="container">
           <Reveal className={styles.mapCard}>
             <iframe
-              src="https://www.google.com/maps?q=Franje+Matkovi%C4%87a+23,+50000+Rijeka,+Hrvatska&output=embed"
+              src="https://www.google.com/maps?q=Dubrova%C4%8Dka+ulica+1,+51000+Rijeka,+Hrvatska&output=embed"
               width="100%"
               height="320"
               style={{ border: 0 }}
