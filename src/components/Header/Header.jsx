@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/Button/Button";
 import { treatments } from "@/data/treatments";
+import { HEAD_SPA_HREF } from "@/data/headSpa";
 import styles from "./Header.module.css";
 
 const treatmentLinks = treatments.map(({ href, title }) => ({ href, label: title }));
@@ -47,10 +48,10 @@ export default function Header() {
             onClick={closeMenu}
           >
             <Image
-              src="/images/logo/logo.webp"
+              src="/images/logo/logo-light.webp"
               alt="Glow Atelier"
-              width={190}
-              height={40}
+              width={185}
+              height={44}
               priority
               className={styles.logoImg}
             />
@@ -89,6 +90,7 @@ export default function Header() {
                 ))}
               </div>
             </div>
+            <Link href={HEAD_SPA_HREF}>Head Spa</Link>
             <Link href="/#cjenik">Cjenik</Link>
             <Link href="/galerija">Galerija</Link>
           </nav>
@@ -152,6 +154,9 @@ export default function Header() {
               ))}
             </div>
 
+            <Link href={HEAD_SPA_HREF} onClick={closeMenu}>
+              Head Spa
+            </Link>
             <Link href="/#cjenik" onClick={closeMenu}>
               Cjenik
             </Link>

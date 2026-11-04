@@ -3,6 +3,9 @@
 // the individual treatment detail pages, so prices and copy never drift
 // out of sync between sections.
 
+// Start date shown next to every treatment "Sidrena cijena".
+export const TREATMENTS_ANCHOR_SINCE = "10.09.2026.";
+
 export const treatments = [
   {
     slug: "laserska-epilacija",

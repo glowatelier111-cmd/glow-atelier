@@ -1,16 +1,35 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Button from "@/components/Button/Button";
 import { treatments } from "@/data/treatments";
+import { headSpaServiceOptions, LIGHTS_ADDON_PRICE } from "@/data/headSpa";
 import { submitToWeb3Forms, WEB3FORMS_KEYS } from "@/lib/web3forms";
 import styles from "./ReservationForm.module.css";
 
-export default function ReservationForm() {
+const serviceValues = [
+  ...treatments.map((treatment) => treatment.slug),
+  ...headSpaServiceOptions.map((option) => option.value),
+];
+
+// Preselects the treatment for links like /rezervacija?tretman=head-spa-basic.
+// Render inside <Suspense> with a plain <ReservationForm /> fallback so the
+// page stays statically prerendered.
+export function ReservationFormFromQuery() {
+  const searchParams = useSearchParams();
+  return <ReservationForm initialService={searchParams.get("tretman") ?? ""} />;
+}
+
+export default function ReservationForm({ initialService = "" }) {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const [service, setService] = useState(serviceValues.includes(initialService) ? initialService : "");
+
+  const offersLights = headSpaServiceOptions.some(
+    (option) => option.value === service && option.lightsAddon
+  );
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -59,17 +78,42 @@ export default function ReservationForm() {
 
       <div className={styles.field}>
         <label htmlFor="service">Tretman *</label>
-        <select id="service" name="service" defaultValue="" required>
+        <select
+          id="service"
+          name="service"
+          value={service}
+          onChange={(event) => setService(event.target.value)}
+          required
+        >
           <option value="" disabled>
             Odaberite tretman
           </option>
-          {treatments.map((treatment) => (
-            <option key={treatment.slug} value={treatment.slug}>
-              {treatment.title}
-            </option>
-          ))}
+          <optgroup label="Tretmani">
+            {treatments.map((treatment) => (
+              <option key={treatment.slug} value={treatment.slug}>
+                {treatment.title}
+              </option>
+            ))}
+          </optgroup>
+          <optgroup label="Head Spa">
+            {headSpaServiceOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </optgroup>
         </select>
       </div>
+
+      {offersLights && (
+        <label className={styles.checkbox}>
+          <input type="checkbox" name="lights" value="Da" />
+          <span>
+            Dodaj Lights Experience (+{LIGHTS_ADDON_PRICE} €) - Alfaparf Milano Lights njega za mekšu,
+            glađu i sjajniju kosu
+          </span>
+        </label>
+      )}
 
       <div className={styles.field}>
         <label htmlFor="message">Poruka</label>

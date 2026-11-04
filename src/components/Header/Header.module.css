@@ -30,7 +30,7 @@
 }
 
 .logoImg {
-  height: 34px;
+  height: 42px;
   width: auto;
 }
 
@@ -376,7 +376,7 @@
 
 @media (max-width: 480px) {
   .logoImg {
-    height: 28px;
+    height: 34px;
   }
 
   .row {

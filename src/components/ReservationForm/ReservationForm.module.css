@@ -51,6 +51,11 @@
   color: var(--color-text);
 }
 
+.field select optgroup {
+  background: var(--color-bg-soft);
+  color: var(--color-accent);
+}
+
 .field select option:disabled {
   color: var(--color-text-muted);
 }
@@ -67,6 +72,30 @@
   outline: none;
   border-color: rgba(228, 191, 139, 0.5);
   background: var(--color-surface-strong);
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: -6px;
+  padding: 14px 16px;
+  border-radius: var(--radius-xs);
+  border: 1px solid rgba(228, 191, 139, 0.24);
+  background: rgba(228, 191, 139, 0.08);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-text-soft);
+  cursor: pointer;
+}
+
+.checkbox input {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
 }
 
 .actions {

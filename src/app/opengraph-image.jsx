@@ -26,17 +26,17 @@ export default async function Image() {
             "linear-gradient(135deg, #090807 0%, #16110e 45%, #0f0c0a 100%)",
         }}
       >
-        <img src={logoSrc} width={640} height={135} />
+        <img src={logoSrc} alt="Glow Atelier" width={640} height={153} />
         <div
           style={{
-            marginTop: 40,
-            fontSize: 30,
+            marginTop: 44,
+            fontSize: 26,
             letterSpacing: 4,
             textTransform: "uppercase",
             color: "#dccfbe",
           }}
         >
-          Laserska epilacija · Hydrafacial · Oblikovanje tijela
+          Laserska epilacija · Hydrafacial · Head Spa · Oblikovanje tijela
         </div>
         <div
           style={{

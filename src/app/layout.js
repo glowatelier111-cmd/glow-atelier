@@ -9,7 +9,7 @@ import "./globals.css";
 const GTM_ID = "GTM-P9P2WPFG";
 const DEFAULT_TITLE = "Glow Atelier Rijeka | Laserska epilacija, Hydrafacial i tretmani oblikovanja tijela";
 const DEFAULT_DESCRIPTION =
-  "Glow Atelier je kozmetički salon u Rijeci za lasersku epilaciju, Hydrafacial i tretmane oblikovanja tijela. Besplatne konzultacije, individualan pristup i licencirano osoblje.";
+  "Glow Atelier je kozmetički salon u Rijeci za lasersku epilaciju, Hydrafacial, Head Spa i tretmane oblikovanja tijela. Besplatne konzultacije, individualan pristup i licencirano osoblje.";
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-heading",

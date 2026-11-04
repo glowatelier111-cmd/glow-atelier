@@ -3,7 +3,7 @@ const nextConfig = {
   /* config options here */
   reactCompiler: true,
 
-  allowedDevOrigins: ["192.168.1.8"],
+  allowedDevOrigins: ["192.168.1.8", "192.168.1.16"],
   async headers() {
     return [
       {

@@ -1,6 +1,6 @@
 # Glow Atelier
 
-Marketing website for **Glow Atelier**, a beauty salon in Rijeka, Croatia offering laser hair removal (laserska epilacija), Hydrafacial, and Tesla/HIEMT body-sculpting treatments. Built with Next.js App Router, targeted at paid Google/Meta ad traffic — no CMS, no booking calendar, no e-commerce.
+Marketing website for **Glow Atelier**, a beauty salon in Rijeka, Croatia offering laser hair removal (laserska epilacija), Hydrafacial, Tesla/HIEMT body-sculpting treatments, and Head Spa rituals. Built with Next.js App Router, targeted at paid Google/Meta ad traffic — no CMS, no booking calendar, no e-commerce.
 
 ## Stack
 
@@ -32,6 +32,8 @@ npm run lint    # eslint
 
 - `src/app/` — routes (App Router). Includes file-convention SEO assets: `sitemap.js`, `robots.js`, `icon.png`/`apple-icon.png`/`favicon.ico`, `opengraph-image.jsx`.
 - `src/app/tretmani/[slug]/` — dynamic treatment pages (`generateStaticParams` from `src/data/treatments.js`).
+- `src/app/head-spa/` — Head Spa landing page (5 rituals, LED maska, Alfaparf Lights, paketi). All its content lives in `src/data/headSpa.js`, which also feeds the Home teaser (`HomeHeadSpa`), the Cjenik card and the reservation form options. Images in `public/images/head-spa/` are Unsplash placeholders until the salon sends real photos — replace them in place with the same file names.
+- `/rezervacija?tretman=<value>` preselects a treatment in the form (e.g. `head-spa-basic`, `led-maska`); Men/Basic show an optional "+ Lights" checkbox.
 - `src/components/` — one folder per component, each with its own `.module.css`.
 - `src/data/` — plain (non-client) data modules: treatments, gallery, home FAQ. Kept out of client components so they can also feed server-only JSON-LD.
 - `src/lib/seo.js` — `buildMetadata()`, the shared helper every page's `metadata`/`generateMetadata` export goes through (title/description/canonical/OG/Twitter).

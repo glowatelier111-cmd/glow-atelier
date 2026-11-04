@@ -1,5 +1,6 @@
+import { Suspense } from "react";
 import PageHero from "@/components/PageHero/PageHero";
-import ReservationForm from "@/components/ReservationForm/ReservationForm";
+import ReservationForm, { ReservationFormFromQuery } from "@/components/ReservationForm/ReservationForm";
 import Reveal from "@/components/Reveal/Reveal";
 import { buildMetadata } from "@/lib/seo";
 import styles from "./page.module.css";
@@ -7,7 +8,7 @@ import styles from "./page.module.css";
 export const metadata = buildMetadata({
   title: "Rezervacija",
   description:
-    "Rezervirajte lasersku epilaciju, Hydrafacial ili tretman oblikovanja tijela u Glow Atelieru Rijeka. Ispunite obrazac i naš tim će vas kontaktirati radi potvrde termina.",
+    "Rezervirajte lasersku epilaciju, Hydrafacial, Head Spa ritual ili tretman oblikovanja tijela u Glow Atelieru Rijeka. Ispunite obrazac i naš tim će vas kontaktirati radi potvrde termina.",
   path: "/rezervacija",
 });
 
@@ -24,7 +25,9 @@ export default function RezervacijaPage() {
         <div className="container">
           <div className={styles.wrap}>
             <Reveal>
-              <ReservationForm />
+              <Suspense fallback={<ReservationForm />}>
+                <ReservationFormFromQuery />
+              </Suspense>
             </Reveal>
           </div>
         </div>

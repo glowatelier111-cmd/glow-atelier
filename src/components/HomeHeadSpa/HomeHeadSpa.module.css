@@ -1,0 +1,129 @@
+.panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(228, 191, 139, 0.22);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(228, 191, 139, 0.14), transparent 45%),
+    var(--color-bg-soft);
+  box-shadow: var(--shadow);
+}
+
+.media {
+  position: relative;
+  min-height: 520px;
+}
+
+.image {
+  object-fit: cover;
+  object-position: 40% center;
+}
+
+.media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 60%, rgba(23, 19, 16, 0.85));
+  pointer-events: none;
+}
+
+.badge {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  z-index: 1;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(13, 11, 10, 0.72);
+  border: 1px solid rgba(228, 191, 139, 0.32);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent-strong);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 56px 56px 52px 44px;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.copy h2 {
+  font-size: clamp(1.9rem, 3.4vw, 2.75rem);
+  line-height: 1.08;
+}
+
+.highlights {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.highlights li {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--color-line-strong);
+  font-size: 0.8rem;
+  color: var(--color-text-soft);
+}
+
+.summary {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.summary strong {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-accent-strong);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .panel {
+    grid-template-columns: 1fr;
+  }
+
+  .media {
+    min-height: 300px;
+  }
+
+  .media::after {
+    background: linear-gradient(180deg, transparent 55%, rgba(23, 19, 16, 0.9));
+  }
+
+  .copy {
+    padding: 32px 24px 36px;
+  }
+}

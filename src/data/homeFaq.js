@@ -28,4 +28,9 @@ export const defaultFaqs = [
     answer:
       "Oblikovanje tijela, jačanje mišića i podizanje stražnjice koriste elektromagnetske impulse koji potiču jaču kontrakciju mišića, a namijenjeni su klijentima koji žele neinvazivnu podršku oblikovanju tijela uz redovitu aktivnost. Tretman se najčešće opisuje kao intenzivna vježba, a ne kao bolan zahvat.",
   },
+  {
+    question: "Što je Head Spa ritual i koliko traje?",
+    answer:
+      "Head Spa je ritual koji povezuje njegu vlasišta i kose s dubokim osjećajem opuštenosti - uz analizu vlasišta trihološkom kamerom, piling, dubinsko pranje, njegu kose te masažu glave, vrata i ramena. Ovisno o odabranom ritualu traje od 30 do 90 minuta, a cijene počinju od 40 €.",
+  },
 ];

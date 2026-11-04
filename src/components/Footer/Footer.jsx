@@ -14,15 +14,15 @@ export default function Footer() {
         <div className={styles.top}>
           <div className={styles.brand}>
             <Image
-              src="/images/logo/logo.webp"
+              src="/images/logo/logo-light.webp"
               alt="Glow Atelier"
-              width={150}
-              height={32}
+              width={168}
+              height={40}
               className={styles.logo}
             />
             <p>Franje Matkovića 23, 50000 Rijeka</p>
             <p className={styles.tagline}>
-              Kozmetički salon za lasersku epilaciju, Hydrafacial i tretmane oblikovanja tijela.
+              Kozmetički salon za lasersku epilaciju, Hydrafacial, Head Spa i tretmane oblikovanja tijela.
             </p>
             <a
               className={styles.social}
@@ -40,6 +40,7 @@ export default function Footer() {
             <Link href="/">Početna</Link>
             <Link href="/o-nama">O nama</Link>
             <Link href="/#tretmani">Tretmani</Link>
+            <Link href="/head-spa">Head Spa</Link>
             <Link href="/galerija">Galerija</Link>
             <Link href="/kontakt">Kontakt</Link>
             <Link href="/rezervacija">Rezervacija</Link>

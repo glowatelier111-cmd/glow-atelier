@@ -1,0 +1,104 @@
+.section {
+  padding-top: 0;
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+  padding: 56px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(228, 191, 139, 0.26);
+  background: linear-gradient(135deg, rgba(228, 191, 139, 0.14), rgba(33, 26, 22, 0.9) 55%);
+  box-shadow: var(--shadow);
+}
+
+.glow {
+  position: absolute;
+  top: -140px;
+  right: -100px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240, 207, 159, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.copy h2 {
+  font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+}
+
+.closing {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: var(--color-accent-strong);
+}
+
+.options {
+  position: relative;
+  display: grid;
+  gap: 14px;
+}
+
+.option {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2px 16px;
+  align-items: center;
+  padding: 20px 24px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-line-strong);
+  background: rgba(13, 11, 10, 0.45);
+}
+
+.option span {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.option strong {
+  grid-row: span 2;
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  color: var(--color-accent-strong);
+}
+
+.option p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.optionIncluded {
+  border-color: rgba(240, 207, 159, 0.45);
+  background: rgba(228, 191, 139, 0.12);
+}
+
+@media (max-width: 900px) {
+  .panel {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 40px 26px;
+  }
+}

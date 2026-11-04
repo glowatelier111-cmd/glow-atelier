@@ -10,6 +10,7 @@ export default function sitemap() {
     { url: "/galerija", priority: 0.6, changeFrequency: "monthly" },
     { url: "/kontakt", priority: 0.8, changeFrequency: "monthly" },
     { url: "/rezervacija", priority: 0.9, changeFrequency: "monthly" },
+    { url: "/head-spa", priority: 0.9, changeFrequency: "monthly" },
     { url: "/politika-privatnosti", priority: 0.3, changeFrequency: "yearly" },
     { url: "/politika-kolacica", priority: 0.3, changeFrequency: "yearly" },
   ];

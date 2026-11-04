@@ -1,0 +1,93 @@
+/* 5 cards: three across the top row, two wider ones underneath */
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  grid-column: span 2;
+  overflow: hidden;
+  padding: 30px 26px 28px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.card:nth-child(n + 4) {
+  grid-column: span 3;
+}
+
+/* Large outline numeral tucked into the top-right corner */
+.number {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(228, 191, 139, 0.55);
+  pointer-events: none;
+  transition: color 0.35s ease, -webkit-text-stroke-color 0.35s ease;
+}
+
+.card h3 {
+  position: relative;
+  max-width: calc(100% - 60px);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.card p {
+  position: relative;
+  font-size: 0.92rem;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(228, 191, 139, 0.28);
+    background: var(--color-surface-strong);
+  }
+
+  .card:hover .number {
+    color: var(--color-accent-strong);
+    -webkit-text-stroke-color: transparent;
+  }
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card,
+  .card:nth-child(n + 4) {
+    grid-column: span 1;
+  }
+
+  .card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card:last-child {
+    grid-column: auto;
+  }
+
+  .number {
+    font-size: 2.6rem;
+  }
+}

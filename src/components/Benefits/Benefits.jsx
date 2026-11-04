@@ -1,38 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BadgeCheck, MessageCircle, Fingerprint, Sparkles, ShieldCheck, TrendingUp } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import styles from "./Benefits.module.css";
 
 const benefits = [
   {
-    icon: BadgeCheck,
     title: "Licencirano osoblje",
     text: "Tretmane provodi educirano osoblje uz stručna objašnjenja prije svakog dolaska.",
   },
   {
-    icon: MessageCircle,
     title: "Besplatne konzultacije",
     text: "Prvi kontakt pretvaramo u jasan plan, a ne u pritisak za kupnju paketa.",
   },
   {
-    icon: Fingerprint,
     title: "Individualan pristup",
     text: "Zona, tip kože i očekivanja klijenta određuju tempo i preporuku tretmana.",
   },
   {
-    icon: Sparkles,
     title: "Moderna oprema",
     text: "Laser, Hydrafacial i tretmani oblikovanja tijela objedinjeni su na jednoj lokaciji u Rijeci.",
   },
   {
-    icon: ShieldCheck,
     title: "Visoka higijena",
     text: "Prostor, radne površine i protokoli pripreme jasno komuniciraju sigurnost i urednost.",
   },
   {
-    icon: TrendingUp,
     title: "Fokus na rezultat",
     text: "Komuniciramo što je realno očekivati nakon 1, 3 i 7+ tretmana, bez nerealnih obećanja.",
   },
@@ -57,9 +50,9 @@ export default function Benefits() {
           description="Kozmetički salon u Rijeci koji gradi povjerenje od prve konzultacije — stručnost, higijena i individualan pristup u svakom koraku."
         />
 
-        <div className={styles.grid}>
-          {benefits.map(({ icon: Icon, title, text }, i) => (
-            <motion.article
+        <ol className={styles.grid}>
+          {benefits.map(({ title, text }, i) => (
+            <motion.li
               key={title}
               className={styles.card}
               initial="hidden"
@@ -68,14 +61,14 @@ export default function Benefits() {
               custom={i}
               variants={cardVariants}
             >
-              <span className={styles.iconWrap}>
-                <Icon size={20} strokeWidth={1.75} />
+              <span className={styles.number} aria-hidden="true">
+                {String(i + 1).padStart(2, "0")}
               </span>
               <h3>{title}</h3>
               <p>{text}</p>
-            </motion.article>
+            </motion.li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

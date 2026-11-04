@@ -1,7 +1,7 @@
 .card {
   position: relative;
   overflow: hidden;
-  max-width: 460px;
+  max-width: 520px;
   margin: 0 auto;
   padding: 32px 30px;
   border-radius: var(--radius-md);
@@ -32,49 +32,63 @@
 .priceList {
   position: relative;
   list-style: none;
-  margin-bottom: 26px;
+  margin-bottom: 14px;
 }
 
 .priceList li {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 4.75rem 4.75rem;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 236, 214, 0.1);
-  font-size: 0.95rem;
-  color: var(--color-text-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 236, 214, 0.08);
 }
 
 .priceList li:last-child {
   border-bottom: none;
 }
 
-.priceList li strong {
+/* Menu-style row: label ······ price */
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.label {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.leader {
+  flex: 1;
+  min-width: 16px;
+  border-bottom: 1px dotted rgba(255, 236, 214, 0.28);
+  transform: translateY(-4px);
+}
+
+.priceRow strong {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
-  color: var(--color-accent-strong);
+  font-size: 1.6rem;
+  line-height: 1;
   white-space: nowrap;
-  text-align: center;
+  color: var(--color-accent-strong);
 }
 
 .anchorPrice {
-  font-size: 0.85rem;
-  text-align: center;
+  align-self: flex-end;
+  font-size: 0.74rem;
   white-space: nowrap;
-}
-
-.priceList li.priceHead {
-  padding: 0 0 2px;
-  border-bottom: none;
-  font-size: 0.72rem;
-  line-height: 1.2;
-  text-align: center;
   color: var(--color-text-muted);
 }
 
-.priceHead span:last-child {
-  color: var(--color-accent-strong);
+.anchorNote {
+  position: relative;
+  margin-bottom: 22px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 236, 214, 0.14);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
 }
 
 .cta {

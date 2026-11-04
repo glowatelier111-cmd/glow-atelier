@@ -6,8 +6,11 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import Button from "@/components/Button/Button";
-import { treatments } from "@/data/treatments";
+import { treatments, TREATMENTS_ANCHOR_SINCE } from "@/data/treatments";
+import { headSpaPriceCard } from "@/data/headSpa";
 import styles from "./Cjenik.module.css";
+
+const priceCards = [...treatments, headSpaPriceCard];
 
 export default function Cjenik() {
   const trackRef = useRef(null);
@@ -72,7 +75,7 @@ export default function Cjenik() {
           )}
 
           <div className={styles.track} ref={trackRef}>
-            {treatments.map((treatment) => (
+            {priceCards.map((treatment) => (
               <article key={treatment.slug} className={styles.card}>
                 <h3>{treatment.title}</h3>
                 {treatment.pricing.note && (
@@ -80,21 +83,21 @@ export default function Cjenik() {
                 )}
 
                 <ul className={styles.priceList}>
-                  <li className={styles.priceHead} aria-hidden="true">
-                    <span />
-                    <span>Sidrena cijena (od 10.09.2026.)</span>
-                    <span>Cijena</span>
-                  </li>
                   {treatment.pricing.packages.map((pkg) => (
                     <li key={pkg.label}>
-                      <span>{pkg.label}</span>
-                      <span className={styles.anchorPrice} aria-label={`Sidrena cijena ${pkg.price}€`}>
-                        {pkg.price}€
-                      </span>
-                      <strong aria-label={`Cijena ${pkg.price}€`}>{pkg.price}€</strong>
+                      <div className={styles.priceRow}>
+                        <span className={styles.label}>{pkg.label}</span>
+                        <span className={styles.leader} aria-hidden="true" />
+                        <strong aria-label={`Cijena ${pkg.price}€`}>{pkg.price}€</strong>
+                      </div>
+                      <span className={styles.anchorPrice}>Sidrena cijena {pkg.price}€</span>
                     </li>
                   ))}
                 </ul>
+
+                <p className={styles.anchorNote}>
+                  Sidrena cijena vrijedi od {treatment.pricing.anchorSince ?? TREATMENTS_ANCHOR_SINCE}
+                </p>
 
                 <Button href={treatment.href} variant="secondary" size="sm" className={styles.cardCta}>
                   Saznaj više
