@@ -11,7 +11,7 @@ import HeadSpaPackages from "@/components/HeadSpaPackages/HeadSpaPackages";
 import Faq from "@/components/Faq/Faq";
 import FinalCta from "@/components/FinalCta/FinalCta";
 import JsonLd from "@/components/JsonLd/JsonLd";
-import { headSpa } from "@/data/headSpa";
+import { headSpa, BLOW_DRY } from "@/data/headSpa";
 import { buildMetadata } from "@/lib/seo";
 import { getServiceSchema, getFaqSchema } from "@/lib/structuredData";
 
@@ -27,6 +27,7 @@ const offers = [
     price: ritual.price,
   })),
   { name: headSpa.led.name, price: headSpa.led.price },
+  { name: BLOW_DRY.name, price: BLOW_DRY.price },
 ];
 
 const serviceSchema = {

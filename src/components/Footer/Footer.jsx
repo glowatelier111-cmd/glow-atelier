@@ -48,15 +48,15 @@ export default function Footer() {
 
           <div className={styles.col}>
             <h3>Javite se</h3>
-            <a href="tel:+385953517205">
+            <a href="tel:+385953038006">
               <Phone size={15} strokeWidth={2} aria-hidden="true" />
-              +385 95 351 7205
+              +385 95 303 8006
             </a>
             <a href="mailto:glowatelier.rijeka@gmail.com">
               <Mail size={15} strokeWidth={2} aria-hidden="true" />
               glowatelier.rijeka@gmail.com
             </a>
-            {/* <a href="https://wa.me/385953517205" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://wa.me/385953038006" target="_blank" rel="noopener noreferrer">
               <MessageCircle size={15} strokeWidth={2} aria-hidden="true" />
               WhatsApp
             </a> */}

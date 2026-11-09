@@ -8,12 +8,6 @@ export const galleryCategories = [
     label: "Prostor",
     items: [
       {
-        src: "/images/gallery/reception.webp",
-        width: 1359,
-        height: 906,
-        alt: "Recepcija Glow Atelier salona",
-      },
-      {
         src: "/images/gallery/waiting-room-empty.webp",
         width: 1359,
         height: 913,

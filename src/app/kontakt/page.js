@@ -13,8 +13,7 @@ export const metadata = buildMetadata({
 });
 
 const hours = [
-  { day: "Ponedjeljak, srijeda, petak", time: "14:00 - 20:00" },
-  { day: "Utorak, četvrtak", time: "08:00 - 14:00" },
+  { day: "Ponedjeljak - petak", time: "08:00 - 20:00" },
   { day: "Subota i nedjelja", time: "Zatvoreno" },
 ];
 
@@ -37,9 +36,9 @@ export default function KontaktPage() {
                   <MapPin size={17} strokeWidth={2} aria-hidden="true" />
                   Dubrovačka ulica 1, 51000 Rijeka
                 </span>
-                <a href="tel:+385953517205">
+                <a href="tel:+385953038006">
                   <Phone size={17} strokeWidth={2} aria-hidden="true" />
-                  +385 95 351 7205
+                  +385 95 303 8006
                 </a>
               </div>
 

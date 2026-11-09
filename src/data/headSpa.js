@@ -7,6 +7,7 @@
 
 export const HEAD_SPA_HREF = "/head-spa";
 export const LIGHTS_ADDON_PRICE = 15;
+export const BLOW_DRY = { slug: "feniranje", name: "Feniranje", price: 20 };
 
 // Start date shown next to every Head Spa "Sidrena cijena".
 export const HEAD_SPA_ANCHOR_SINCE = "01.11.2026.";
@@ -369,6 +370,11 @@ export const headSpaServiceOptions = [
     label: `${headSpa.led.name} (${headSpa.led.duration} min, ${headSpa.led.price} €)`,
     lightsAddon: false,
   },
+  {
+    value: BLOW_DRY.slug,
+    label: `${BLOW_DRY.name} (${BLOW_DRY.price} €)`,
+    lightsAddon: false,
+  },
 ];
 
 // Shaped like a treatments.js entry so Cjenik can render it with the same card.
@@ -385,6 +391,7 @@ export const headSpaPriceCard = {
         price: ritual.price,
       })),
       { label: `LED maska · ${headSpa.led.duration} min`, price: headSpa.led.price },
+      { label: BLOW_DRY.name, price: BLOW_DRY.price },
     ],
   },
 };

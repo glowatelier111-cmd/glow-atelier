@@ -51,8 +51,7 @@ Google Tag Manager (`GTM-P9P2WPFG`) is loaded in `src/app/layout.js` with a Goog
 
 The codebase builds cleanly and is fully static — see the [security audit notes](#security) below. Known open items before full launch:
 
-- **Web3Forms** — contact/booking forms are built but not yet wired to a submission endpoint.
-- **Working hours** — placeholder hours are used on the Kontakt page and in the `BeautySalon` JSON-LD; need to be confirmed with the salon.
+- **Contact details** — address (Dubrovačka ulica 1, 51000 Rijeka), phone (+385 95 303 8006) and working hours (Mon–Fri 08:00–20:00) are confirmed. Hours live in two places that must stay in sync: `src/app/kontakt/page.js` and the `BeautySalon` JSON-LD in `src/lib/structuredData.js`.
 - **Email address** — `glowatelier.rijeka@gmail.com` is used site-wide; confirm this matches the salon's registered contact email.
 - **Reviews / Results pages** — intentionally not built; no real review data or before/after photos (with consent) exist yet.
 

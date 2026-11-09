@@ -33,11 +33,11 @@ export default function FinalCta() {
           </div>
 
           <div className={styles.links}>
-            <a href="tel:+385953517205">
+            <a href="tel:+385953038006">
               <Phone size={16} strokeWidth={2.2} aria-hidden="true" />
-              +385 95 351 7205
+              +385 95 303 8006
             </a>
-            <a href="https://wa.me/385953517205" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/385953038006" target="_blank" rel="noopener noreferrer">
               <MessageCircle size={16} strokeWidth={2.2} aria-hidden="true" />
               WhatsApp
             </a>

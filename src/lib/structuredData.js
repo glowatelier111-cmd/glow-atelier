@@ -2,16 +2,15 @@ import { SITE_URL } from "./seo";
 
 const BUSINESS_NAME = "Glow Atelier";
 
-// Placeholder hours (same ones shown on /kontakt) until the owner confirms
-// real working hours - update both places together when that happens.
+// Working hours must match the ones shown on /kontakt - update both together.
 export function getLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     name: BUSINESS_NAME,
-    image: `${SITE_URL}/images/gallery/reception.webp`,
+    image: `${SITE_URL}/images/hero/hero.webp`,
     url: SITE_URL,
-    telephone: "+385953517205",
+    telephone: "+385953038006",
     email: "glowatelier.rijeka@gmail.com",
     priceRange: "€€",
     address: {
@@ -25,14 +24,8 @@ export function getLocalBusinessSchema() {
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "09:00",
+        opens: "08:00",
         closes: "20:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Saturday"],
-        opens: "09:00",
-        closes: "15:00",
       },
     ],
     sameAs: ["https://instagram.com/glowatelier_rijeka"],

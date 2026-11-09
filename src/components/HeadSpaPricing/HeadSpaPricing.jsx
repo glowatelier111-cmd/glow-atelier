@@ -1,7 +1,7 @@
 import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import Button from "@/components/Button/Button";
 import Reveal from "@/components/Reveal/Reveal";
-import { headSpa, HEAD_SPA_ANCHOR_SINCE, LIGHTS_ADDON_PRICE } from "@/data/headSpa";
+import { headSpa, BLOW_DRY, HEAD_SPA_ANCHOR_SINCE, LIGHTS_ADDON_PRICE } from "@/data/headSpa";
 import styles from "./HeadSpaPricing.module.css";
 
 const addonRituals = headSpa.rituals
@@ -9,12 +9,20 @@ const addonRituals = headSpa.rituals
   .map((ritual) => ritual.name)
   .join(" i ");
 
-const extras = [
+const standaloneServices = [
   {
     name: headSpa.led.name,
     meta: `${headSpa.led.duration} min · samostalan tretman`,
     price: `${headSpa.led.price}€`,
   },
+  {
+    name: BLOW_DRY.name,
+    meta: "samostalna usluga",
+    price: `${BLOW_DRY.price}€`,
+  },
+];
+
+const upgrades = [
   {
     name: "Lights Experience",
     meta: `nadogradnja uz ${addonRituals} ritual`,
@@ -74,10 +82,17 @@ export default function HeadSpaPricing() {
             ))}
           </ul>
 
-          <span className={styles.groupLabel}>Dodatno</span>
+          <span className={styles.groupLabel}>Samostalne usluge</span>
           <ul className={styles.list}>
-            {extras.map((extra) => (
-              <PriceRow key={extra.name} {...extra} />
+            {standaloneServices.map((service) => (
+              <PriceRow key={service.name} {...service} />
+            ))}
+          </ul>
+
+          <span className={styles.groupLabel}>Nadogradnja</span>
+          <ul className={styles.list}>
+            {upgrades.map((upgrade) => (
+              <PriceRow key={upgrade.name} {...upgrade} />
             ))}
           </ul>
 

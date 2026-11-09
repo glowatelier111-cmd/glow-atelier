@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Fingerprint, Sparkles, Building2, ShieldCheck } from "lucide-react";
+import { Fingerprint, Sparkles, MessageCircle, ShieldCheck } from "lucide-react";
 import PageHero from "@/components/PageHero/PageHero";
 import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import FinalCta from "@/components/FinalCta/FinalCta";
@@ -10,7 +10,7 @@ import styles from "./page.module.css";
 export const metadata = buildMetadata({
   title: "O nama",
   description:
-    "Glow Atelier by Orešković Clinic - ekskluzivni kozmetički salon u Rijeci, dio Orešković Clinic mreže prisutne u Zagrebu i Opatiji.",
+    "Glow Atelier - ekskluzivni kozmetički salon u Rijeci za lasersku epilaciju, Hydrafacial, Head Spa i oblikovanje tijela, uz vrhunsku tehnologiju i individualan pristup.",
   path: "/o-nama",
 });
 
@@ -26,9 +26,9 @@ const trustPoints = [
     text: "Vertona Superior laser i Tesla HiEMT Pro Max ubrajaju se među najnaprednije uređaje na tržištu za svoju namjenu.",
   },
   {
-    icon: Building2,
-    title: "Dio Orešković Clinic mreže",
-    text: "Glow Atelier dio je Orešković Clinic mreže prisutne u Zagrebu i Opatiji, koja iskustvo u rehabilitaciji i estetskim tretmanima donosi i u Rijeku.",
+    icon: MessageCircle,
+    title: "Besplatne konzultacije",
+    text: "Prvi kontakt pretvaramo u jasan plan tretmana, a ne u pritisak za kupnju paketa.",
   },
   {
     icon: ShieldCheck,
@@ -42,8 +42,8 @@ export default function ONamaPage() {
     <main>
       <PageHero
         eyebrow="O nama"
-        title="Glow Atelier by Orešković Clinic"
-        description="Ekskluzivni kozmetički salon u Rijeci koji spaja vrhunsku tehnologiju, individualan pristup i iskustvo Orešković Clinic mreže."
+        title="Glow Atelier"
+        description="Ekskluzivni kozmetički salon u Rijeci koji spaja vrhunsku tehnologiju i individualan pristup svakom klijentu."
       />
 
       <section className="section">
@@ -56,11 +56,9 @@ export default function ONamaPage() {
                 title="Kako je nastao Glow Atelier"
               />
               <p>
-                Glow Atelier by Orešković Clinic otvoren je 1. listopada 2025. godine na Donjoj
-                Vežici u Rijeci, kao dio Orešković Clinic mreže prisutne u Zagrebu i Opatiji u
-                području rehabilitacije, oporavka i estetskih tretmana. Otvaranjem salona u
-                Rijeci, to iskustvo i vrhunska tehnologija postali su dostupni i klijentima na
-                Kvarneru.
+                Glow Atelier otvoren je 1. listopada 2025. godine u Rijeci, s jednim ciljem:
+                vrhunsku tehnologiju i individualan pristup estetskim tretmanima približiti
+                klijentima na Kvarneru.
               </p>
               <p>
                 U srcu ponude nalaze se dva uređaja nove generacije: Vertona Superior laser za
@@ -95,7 +93,7 @@ export default function ONamaPage() {
           <SectionHeading
             eyebrow="Zašto nam klijenti vjeruju"
             title="Povjerenje koje gradimo od prve konzultacije"
-            description="Kombinacija provjerene tehnologije, individualnog pristupa i iskustva Orešković Clinic mreže."
+            description="Kombinacija provjerene tehnologije, individualnog pristupa i pažnje prema svakom klijentu."
           />
 
           <div className={styles.trustGrid}>
